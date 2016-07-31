@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Celluloid | Bollywood Movies</title>
+
+    <!-- Bootstrap -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+  </head>
+
+  <body>
+
+    <div class="container" id="main">
+
+      <!--Begining of navigation bar-->
+     <nav class="navbar  navbar-fixed-top navbar-inverse">
+       <div class="container">
+         <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false">
+             <!-- <span class="sr-only">Toggle navigation</span> -->
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="../index.html"> <span class="glyphicon glyphicon-film"></span> Celluloid</a>
+         </div>
+
+         <!-- Collect the nav links, forms, and other content for toggling -->
+         <div class="collapse navbar-collapse" id="navigation-bar">
+           <ul class="nav navbar-nav">
+             <li class="active"><a href="../index.html">Home</a></li>
+             <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Movies <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                 <li><a href="hollywood.html">Hollywood</a></li>
+                 <li role="separator" class="divider"></li>
+                 <li><a href="bollywood.html">Bollywood</a></li>
+                 <li role="separator" class="divider"></li>
+                 <li><a href="tollywood.html">Tollywood</a></li>
+                </ul>
+              </li>
+            </ul>
+
+           <form class="navbar-form pull-left">
+             <input type="text" class="form-control" placeholder="Search this site..." id="searchInput">
+             <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+           </form><!-- end navbar-form -->
+
+           <ul class="nav navbar-nav navbar-right">
+             <li><a href="#myModal"  data-toggle="modal"> <span class="glyphicon glyphicon-user"></span> Log in / Sign Up</a></li>
+           </ul>
+         </div><!-- /.navbar-collapse -->
+       </div><!-- /.container -->
+     </nav><!--end nav-->
+
+
+    <!--BEgining of the Modal window-->
+
+     <div class="modal fade" id="myModal">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button class="close" data-dismiss="modal">&times;</button>
+             <h4 class="modal-title">Log In / Sign Up</h4>
+           </div><!-- end modal-header -->
+
+           <div class="modal-body center">
+               <h4>" You are just one step away from a delightful experience "</h4>
+               <hr>
+               <div class="tabbable">
+                 <ul class="nav nav-pills nav-justified">
+                   <li class="active"><a href="#tab1" data-toggle="tab">Log In</a></li>
+                   <li><a href="#tab2" data-toggle="tab">Sign Up</a></li>
+                 </ul>
+
+                 <div class="tab-content">
+                   <div class="tab-pane active" id="tab1">
+
+                    <form class="form-horizontal">
+                      <div class="form-group" id="Uname">
+                       <label class="col-lg-2 control-label" for="inputName">Username</label>
+                        <div class="col-lg-8">
+                           <input class="form-control" type="text" id="userName" placeholder="Username" describedby="userName_icon" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group" >
+                        <label class="col-lg-2 control-label" for="inputPassword">Password</label>
+                         <div class="col-lg-8">
+                           <input class="form-control" type="password" id="Password" placeholder="Password" required>
+                           <button class="btn btn-success pull-right" type="submit">Login</button>
+                        </div>
+                     </div>
+                   </form>
+                 </div>
+
+               <div class="tab-pane" id="tab2">
+
+               <form class="form-horizontal">
+                    <div class="form-group" id="Fname">
+                      <label class="col-lg-4 control-label" for="inputFirstName">First Name</label>
+                      <div class="col-lg-8">
+                       <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" required>
+                      </div>
+                    </div>
+
+                   <div class="form-group">
+                     <label class="col-lg-4 control-label" for="inputLastName">Last Name</label>
+                     <div class="col-lg-8">
+                       <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" required>
+                     </div>
+                   </div>
+
+                   <div class="form-group">
+                     <label class="col-lg-4 control-label" for="emailAddress">E-mail Address</label>
+                     <div class="col-lg-8">
+                      <input type="email" class="form-control" id="emailAddress" placeholder="E-mail Address" required>
+                     </div>
+                  </div>
+
+
+                   <div class="form-group">
+                     <label class="col-lg-4 control-label" for="userName">Username</label>
+                     <div class="col-lg-8">
+                       <input type="text" class="form-control" id="userName" placeholder="Username" required>
+                     </div>
+                  </div>
+
+                   <div class="form-group">
+                     <label class="col-lg-4 control-label" for="password">Password</label>
+                     <div class="col-lg-8">
+                       <input pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" type="password" class="form-control" id=="Password" placeholder="Password" required>
+                     </div>
+                   </div>
+
+                   <div class="form-group">
+                     <label class="col-lg-4 control-label" for="confirm_password">Confirm Password</label>
+                     <div class="col-lg-8">
+                        <input pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" type="password" class="form-control" id=="Confirm_Password" placeholder="Confirm Password" required>
+                         <p id="Password_info">*Password Should contain (UpperCase, LowerCase,
+                            Number/SpecialChar and min 8 Chars)</p>
+                        <button class="btn btn-success pull-right" type="submit">Sign Up</button>
+                     </div>
+                   </div>
+                 </form><!--end form of tab-2-->
+               </div><!--end tab pan -2-->
+             </div><!--end tab content-->
+           </div><!--end of tabbable-->
+           </div><!-- end modal-body -->
+
+
+           <div class="modal-footer">
+             <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+             <!-- <button class="btn btn-primary" type="button">Save changes</button> -->
+           </div><!-- end modal-footer -->
+         </div><!-- end modal-content -->
+       </div><!-- end modal-dialog -->
+     </div><!-- end myModal -->
+
+     <div class="row" id="moviesHeading">
+       <div class="container">
+       <div class="col-md-8">
+         <h2>Bollywood Movies</h2>
+       </div><!-- end col-12 -->
+       <div class="col-md-4">
+         <ol class="breadcrumb pull-right">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="bollywood.html" class="active">Bollywood</a></li>
+          <!-- <li >Data</li> -->
+        </ol>
+      </div>
+      </div>
+     </div><!-- end Movies Heading -->
+
+    <div class="row" id="features">
+
+      <div class="col-md-3 feature">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Action</h3>
+          </div><!-- end panel-heading -->
+          <div class="panel-body">
+          <img src="../images/bollywood/1.jpg" alt="img" class="img-rounded">
+    <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+        </div>
+        </div><!-- end panel -->
+      </div><!-- end feature -->
+
+      <div class="col-md-3 feature">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Drama</h3>
+          </div><!-- end panel-heading -->
+          <div class="panel-body">
+          <img src="../images/bollywood/2.jpg" alt="img" class="img-rounded">
+    <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+        </div>
+        </div><!-- end panel -->
+      </div><!-- end feature -->
+
+      <div class="col-md-3 feature">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Romance</h3>
+          </div><!-- end panel-heading -->
+          <div class="panel-body">
+          <img src="../images/bollywood/3.jpg" alt="img" class="img-rounded">
+    <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+        </div>
+        </div><!-- end panel -->
+      </div><!-- end feature -->
+
+      <div class="col-md-3 feature">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Mystery</h3>
+            </div><!-- end panel-heading -->
+
+            <div class="panel-body">
+               <img src="../images/bollywood/4.jpg" alt="img" class="img-rounded">
+               <a href="https://www.youtube.com/watch?v=mERM-Fpc7hU" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+            </div>
+         </div><!-- end panel -->
+      </div><!-- end feature -->
+
+      <!-- <div class="row" id="features"> -->
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Romance</h3>
+            </div><!-- end panel-heading -->
+            <div class="panel-body">
+            <img src="../images/bollywood/5.jpg" alt="img" class="img-rounded">
+        <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+          </div>
+          </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Drama</h3>
+            </div><!-- end panel-heading -->
+            <div class="panel-body">
+            <img src="../images/bollywood/6.jpg" alt="img" class="img-rounded">
+        <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+          </div>
+          </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Biography</h3>
+            </div><!-- end panel-heading -->
+            <div class="panel-body">
+            <img src="../images/bollywood/7.jpg" alt="img" class="img-rounded">
+        <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+          </div>
+          </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+
+              <div class="panel-heading">
+                <h3 class="panel-title">Drama</h3>
+              </div><!-- end panel-heading -->
+
+              <div class="panel-body">
+                 <img src="../images/bollywood/8.jpg" alt="img" class="img-rounded">
+                 <a href="https://www.youtube.com/watch?v=mERM-Fpc7hU" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+              </div>
+           </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Classic</h3>
+            </div><!-- end panel-heading -->
+            <div class="panel-body">
+            <img src="../images/bollywood/9.jpg" alt="img" class="img-rounded">
+        <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+          </div>
+          </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Action</h3>
+            </div><!-- end panel-heading -->
+            <div class="panel-body">
+            <img src="../images/bollywood/10.jpg" alt="img" class="img-rounded">
+        <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+          </div>
+          </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Mystery</h3>
+            </div><!-- end panel-heading -->
+            <div class="panel-body">
+            <img src="../images/bollywood/11.jpg" alt="img" class="img-rounded">
+        <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+          </div>
+          </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <div class="col-md-3 feature">
+          <div class="panel panel-default">
+
+              <div class="panel-heading">
+                <h3 class="panel-title">Drama</h3>
+              </div><!-- end panel-heading -->
+
+              <div class="panel-body">
+                 <img src="../images/bollywood/12.jpg" alt="img" class="img-rounded">
+                 <a href="https://www.youtube.com/watch?v=mERM-Fpc7hU" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+              </div>
+           </div><!-- end panel -->
+        </div><!-- end feature -->
+
+        <!-- <div class="row" id="features"> -->
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Thriller</h3>
+              </div><!-- end panel-heading -->
+              <div class="panel-body">
+              <img src="../images/bollywood/13.jpg" alt="img" class="img-rounded">
+            <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+            </div>
+            </div><!-- end panel -->
+          </div><!-- end feature -->
+
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Documentary</h3>
+              </div><!-- end panel-heading -->
+              <div class="panel-body">
+              <img src="../images/bollywood/14.jpg" alt="img" class="img-rounded">
+            <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+            </div>
+            </div><!-- end panel -->
+          </div><!-- end feature -->
+
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Action</h3>
+              </div><!-- end panel-heading -->
+              <div class="panel-body">
+              <img src="../images/bollywood/15.jpg" alt="img" class="img-rounded">
+            <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+            </div>
+            </div><!-- end panel -->
+          </div><!-- end feature -->
+
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                  <h3 class="panel-title">Drama</h3>
+                </div><!-- end panel-heading -->
+
+                <div class="panel-body">
+                   <img src="../images/bollywood/16.jpg" alt="img" class="img-rounded">
+                   <a href="https://www.youtube.com/watch?v=mERM-Fpc7hU" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+                </div>
+             </div><!-- end panel -->
+          </div><!-- end feature -->
+
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Action</h3>
+              </div><!-- end panel-heading -->
+              <div class="panel-body">
+              <img src="../images/bollywood/17.jpg" alt="img" class="img-rounded">
+            <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+            </div>
+            </div><!-- end panel -->
+          </div><!-- end feature -->
+
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Action</h3>
+              </div><!-- end panel-heading -->
+              <div class="panel-body">
+              <img src="../images/bollywood/18.jpg" alt="img" class="img-rounded">
+            <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+            </div>
+            </div><!-- end panel -->
+          </div><!-- end feature -->
+
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Action</h3>
+              </div><!-- end panel-heading -->
+              <div class="panel-body">
+              <img src="../images/bollywood/19.jpg" alt="img" class="img-rounded">
+            <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+            </div>
+            </div><!-- end panel -->
+          </div><!-- end feature -->
+
+          <div class="col-md-3 feature">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                  <h3 class="panel-title">Drama</h3>
+                </div><!-- end panel-heading -->
+
+                <div class="panel-body">
+                   <img src="../images/bollywood/20.jpg" alt="img" class="img-rounded">
+                   <a href="https://www.youtube.com/watch?v=mERM-Fpc7hU" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+                </div>
+             </div><!-- end panel -->
+          </div><!-- end feature -->
+
+            <div class="col-md-3 feature">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Action</h3>
+                </div><!-- end panel-heading -->
+                <div class="panel-body">
+                <img src="../images/bollywood/21.jpg" alt="img" class="img-rounded">
+                <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+              </div>
+              </div><!-- end panel -->
+            </div><!-- end feature -->
+
+            <div class="col-md-3 feature">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Action</h3>
+                </div><!-- end panel-heading -->
+                <div class="panel-body">
+                <img src="../images/bollywood/22.jpg" alt="img" class="img-rounded">
+                <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+              </div>
+              </div><!-- end panel -->
+            </div><!-- end feature -->
+
+            <div class="col-md-3 feature">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Action</h3>
+                </div><!-- end panel-heading -->
+                <div class="panel-body">
+                <img src="../images/bollywood/23.jpg" alt="img" class="img-rounded">
+                <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+              </div>
+              </div><!-- end panel -->
+            </div><!-- end feature -->
+
+            <div class="col-md-3 feature">
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Drama</h3>
+                  </div><!-- end panel-heading -->
+                  <div class="panel-body">
+                     <img src="../images/bollywood/24.jpg" alt="img" class="img-rounded">
+                     <a href="https://www.youtube.com/watch?v=mERM-Fpc7hU" target="_blank" class="btn btn-primary btn-block">Click to watch</a>
+                  </div>
+               </div><!-- end panel -->
+            </div><!-- end feature -->
+
+      </div><!-- end features -->
+<!-- </div> -->
+
+<nav aria-label="Page navigation">
+  <ul class="pagination pull-right">
+    <li>
+      <a href="hollywood.html" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="../index.html">1</a></li>
+    <li><a href="hollywood.html">2</a></li>
+    <li class="active"><a href="bollywood.html">3</a></li>
+    <li><a href="tollywood.html">4</a></li>
+    <li>
+      <a href="tollywood.html" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div><!--end main container-->
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+            <h6>Copyright &copy; 2016 Celluloid</h6>
+          </div><!-- end col-md-2 -->
+
+            <div class="col-md-4">
+              <h6>About Us</h6>
+              <p>
+                Hub of an exhaustive collection of online library of movies and dvd's.
+              </p>
+            </div><!-- end col-md-4 -->
+
+            <div class="col-md-2">
+              <h6>Navigation</h6>
+              <ul class="unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Links</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div><!-- end col-md-2 -->
+
+            <div class="col-md-2">
+              <h6>Follow Us</h6>
+              <ul class="unstyled">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Google Plus</a></li>
+              </ul>
+            </div><!-- end col-md-2 -->
+
+            <div class="col-md-2">
+              <h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Dp</h6>
+            </div><!-- end col-md-2 -->
+          </div><!-- end row -->
+        </div><!-- end container -->
+      </footer>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- If no online access, fallback to our hardcoded version of jQuery -->
+      	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <!-- <script src="bootstrap/js/npm.js"></script> -->
+        <script src="../js/script.js"></script>
+
+      </body>
+    </html>

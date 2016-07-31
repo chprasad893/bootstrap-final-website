@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Celluloid | Home</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+
+  <body>
+
+    <div class="container" id="main">
+
+     <!--Begining of navigation bar-->
+    <nav class="navbar  navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false">
+            <!-- <span class="sr-only">Toggle navigation</span> -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"> <span class="glyphicon glyphicon-film"></span> Celluloid</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navigation-bar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Movies <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="pages/hollywood.html">Hollywood</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="pages/bollywood.html">Bollywood</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="pages/tollywood.html">Tollywood</a></li>
+               </ul>
+             </li>
+           </ul>
+
+          <form class="navbar-form pull-left">
+            <input type="text" class="form-control" placeholder="Search this site..." id="searchInput">
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+          </form><!-- end navbar-form -->
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#myModal"  data-toggle="modal"> <span class="glyphicon glyphicon-user"></span> Log in / Sign Up</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!--end nav-->
+
+    <div class="carousel slide" id="myCarousel">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+        <li data-slide-to="1" data-target="#myCarousel"></li>
+        <li data-slide-to="2" data-target="#myCarousel"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active" id="slide1">
+          <!-- <div class="carousel-caption">
+            <h4>Bootstrap 3</h4>
+            <p>Learn how to build your first responsive website with the brand new Twitter Bootstrap 3!</p>
+          </div><! end carousel-caption-->
+        </div><!-- end item -->
+
+        <div class="item" id="slide2">
+          <!-- <div class="carousel-caption">
+            <h4>Learn to code a website in 4-hours!</h4>
+            <p>PSD to HTML5 &amp; CSS3 is a popular Udemy course that has helped thousands of aspiring web designers launch their web design career.</p>
+          </div><!-end carousel-caption- -->
+        </div><!-- end item -->
+
+        <div class="item" id="slide3">
+          <!-- <div class="carousel-caption">
+            <h4>Web Hosting 101</h4>
+            <p>Learn how to buy a perfect domain name and hosting package, and get your website live on the web with ease.</p>
+          </div><!- end carousel-caption -->
+        </div><!-- end item -->
+      </div><!-- carousel-inner -->
+
+      <!-- Controls -->
+      <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+      <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+
+    </div><!-- end myCarousel -->
+
+
+   <!--BEgining of the Modal window-->
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Log In / Sign Up</h4>
+          </div><!-- end modal-header -->
+
+          <div class="modal-body center">
+              <h4>" You are just one step away from a delightful experience "</h4>
+              <hr>
+              <div class="tabbable">
+     						<ul class="nav nav-pills nav-justified">
+     							<li class="active"><a href="#tab1" data-toggle="tab">Log In</a></li>
+     							<li><a href="#tab2" data-toggle="tab">Sign Up</a></li>
+     						</ul>
+
+                <div class="tab-content">
+	                <div class="tab-pane active" id="tab1">
+
+                   <form class="form-horizontal">
+                     <div class="form-group" id="Uname">
+                      <label class="col-lg-2 control-label" for="inputName">Username</label>
+                       <div class="col-lg-8">
+                          <input class="form-control" type="text" id="userName" placeholder="Username" describedby="userName_icon" required>
+                       </div>
+                     </div>
+
+                     <div class="form-group" >
+                       <label class="col-lg-2 control-label" for="inputPassword">Password</label>
+                        <div class="col-lg-8">
+                          <input class="form-control" type="password" id="Password" placeholder="Password" required>
+                          <button class="btn btn-success pull-right" type="submit">Login</button>
+                       </div>
+                    </div>
+                  </form>
+                </div>
+
+	            <div class="tab-pane" id="tab2">
+
+              <form class="form-horizontal">
+                   <div class="form-group" id="Fname">
+                     <label class="col-lg-4 control-label" for="inputFirstName">First Name</label>
+                     <div class="col-lg-8">
+                      <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" required>
+                     </div>
+                   </div>
+
+                  <div class="form-group">
+                    <label class="col-lg-4 control-label" for="inputLastName">Last Name</label>
+                    <div class="col-lg-8">
+                      <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-lg-4 control-label" for="emailAddress">E-mail Address</label>
+                    <div class="col-lg-8">
+                     <input type="email" class="form-control" id="emailAddress" placeholder="E-mail Address" required>
+                    </div>
+                 </div>
+
+
+                  <div class="form-group">
+                    <label class="col-lg-4 control-label" for="userName">Username</label>
+                    <div class="col-lg-8">
+                      <input type="text" class="form-control" id="userName" placeholder="Username" required>
+                    </div>
+                 </div>
+
+                  <div class="form-group">
+                    <label class="col-lg-4 control-label" for="password">Password</label>
+                    <div class="col-lg-8">
+                      <input pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" type="password" class="form-control" id=="Password" placeholder="Password" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-lg-4 control-label" for="confirm_password">Confirm Password</label>
+                    <div class="col-lg-8">
+                       <input pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" type="password" class="form-control" id=="Confirm_Password" placeholder="Confirm Password" required>
+                        <p id="Password_info">*Password Should contain (UpperCase, LowerCase,
+                           Number/SpecialChar and min 8 Chars)</p>
+                       <button class="btn btn-success pull-right" type="submit">Sign Up</button>
+                    </div>
+                  </div>
+                </form><!--end form of tab-2-->
+              </div><!--end tab pan -2-->
+            </div><!--end tab content-->
+          </div><!--end of tabbable-->
+          </div><!-- end modal-body -->
+
+
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+            <!-- <button class="btn btn-primary" type="button">Save changes</button> -->
+          </div><!-- end modal-footer -->
+        </div><!-- end modal-content -->
+      </div><!-- end modal-dialog -->
+    </div><!-- end myModal -->
+
+
+    <div class="row" id="bigCallout">
+      <div class="container">
+      <div class="col-12">
+
+        <!-- <div class="alert alert-success alert-block fade in" id="successAlert">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+          <h4>Success!</h4>
+          <p>You just made this element display by using jQuery. Click the "x" in the top right corner to close this bad boy.</p>
+        </div><!-end alert -->
+
+        <!-- Visible only on small devices -->
+        <div class="well well-small visible-sm">
+          <a href="" class="btn btn-large btn-block btn-default"><span class="glyphicon glyphicon-phone"></span> Give us a call!</a>
+        </div><!-- end well-small -->
+
+        <div class="well">
+          <div class="page-header">
+            <h2>One Stop Website For All Your Entertainment Needs</h2>
+          </div><!-- end page-header -->
+
+          <p class="lead"></p>
+
+          <a href="" class="btn btn-large btn-primary" id="alertMe">Watch latest movies</a>
+          <a href="" class="btn btn-large btn-link">or Buy DVD's</a>
+        </div><!-- end well -->
+
+      </div><!-- end col-12 -->
+      </div>
+    </div><!-- end bigCallout -->
+
+
+    <div class="row" id="featuresHeading">
+      <div class="container">
+      <div class="col-12">
+        <h2>Hand Picked Movies For You</h2>
+      </div><!-- end col-12 -->
+      </div>
+    </div><!-- end featuresHeading -->
+
+
+    <div class="row" id="features">
+      <div class="col-sm-4 feature">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Action</h3>
+          </div><!-- end panel-heading -->
+          <div class="panel-body">
+          <img src="images/pick-1.jpg" alt="HTML5" class="img-rounded">
+
+          <!-- <p>90's authentic single-origin coffee stumptown Pinterest. Fap aesthetic dreamcatcher pickled Brooklyn irony.</p> -->
+
+          <a href="https://www.youtube.com/watch?v=LTzsJ4WASTo" target="_blank" class="btn btn-warning btn-block">Click to watch</a>
+        </div>
+        </div><!-- end panel -->
+      </div><!-- end feature -->
+
+      <div class="col-sm-4 feature">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Romantic</h3>
+          </div><!-- end panel-heading -->
+            <div class="panel-body">
+          <img src="images/pick-2.jpg" alt="CSS3" class="img-rounded">
+
+          <!-- <p>90's authentic single-origin coffee stumptown Pinterest. Fap aesthetic dreamcatcher pickled Brooklyn irony.</p> -->
+
+          <a href="https://www.youtube.com/watch?v=-VmWdMC3sy0" target="_blank" class="btn btn-danger btn-block">Click To watch</a>
+        </div>
+        </div><!-- end panel -->
+      </div><!-- end feature -->
+
+      <div class="col-sm-4 feature">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sci-Fi</h3>
+          </div><!-- end panel-heading -->
+            <div class="panel-body">
+          <img src="images/pick-3.jpg" alt="Bootstrap 3" class="img-rounded">
+
+          <!-- <p>90's authentic single-origin coffee stumptown Pinterest. Fap aesthetic dreamcatcher pickled Brooklyn irony.</p> -->
+
+          <a href="https://www.youtube.com/watch?v=mERM-Fpc7hU" target="_blank" class="btn btn-info btn-block">Click to watch</a>
+        </div>
+        </div><!-- end panel -->
+      </div><!-- end feature -->
+    </div><!-- end features -->
+
+
+    <!--Movie of the week-->
+    <div class="row" id="weekMovie">
+      <div class="col-sm-6">
+        <h3>Movie of the week</h3>
+          <div class="tabbable">
+            <ul class="nav nav-tabs">
+							<li class="active"><a href="#tab3" data-toggle="tab" >Movie</a></li>
+							<li><a href="#tab4" data-toggle="tab">Trailor</a></li>
+						</ul>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab3">
+              <h4><span class="glyphicon glyphicon-facetime-video"></span> KABALI <small>rajini style</small></h4>
+              <a href="https://in.bookmyshow.com/buytickets/kabali-chennai/movie-chen-ET00039091-MT/20160725" target="_blank"><img src="images/week.jpg" alt="kabali poster" /></a>
+            </div><!--tab pan-1-->
+
+            <div class="tab-pane" id="tab4">
+              <h4>Kabali Trailor</h4>
+              <iframe width="520" height="480" src="https://www.youtube.com/embed/9mdJV5-eias" frameborder="0" allowfullscreen></iframe>
+              <!-- <img src="images/hero-sm-3" alt="" /> -->
+            </div><!--tab pan-2-->
+
+          </div><!-- tab-content -->
+        </div><!-- end tabbable -->
+      </div><!-- end col-6 -->
+
+      <div class="col-sm-6">
+       <h3>Kabali Broke All Records</h3>
+           <p>
+             Rajinikanth’s Kabali has shown that it is critic-proof with its
+             massive box office collections.Kabali is smashing BO records with its collections.
+             With its day 1 earnings of approximately Rs 42 crore, the
+             film is looking at over Rs 120 crore weekend business. On Friday, the
+             film made Rs 21.5 crore in Tamil Nadu alone.
+           </p>
+       <h4>Popular Tweets</h4>
+
+       <div class="list-group">
+         <a href="#" class="list-group-item">
+           <h4 class="list-group-item-heading">Taran Adarsh</h4>
+           <p>
+            “  #Kabali [Tamil+Telugu] opening in international markets:
+              Malaysia: No 1 [Thu+Fri]
+              USA-Canada: No 3 [Thu pre]
+              UK: No 10 [Thu+Fri]@Rentrak ”
+                      — taran adarsh (@taran_adarsh) July 23, 2016
+           </p>
+         </a>
+         <a href="#" class="list-group-item">
+           <h4 class="list-group-item-heading">Indian Boxoffice</h4>
+           <p>
+             “ #Kabali is now already becomes highest grossing tamil film in USA ever
+              . Superstar power . @theVcreations @beemji ”
+                      — Indian Boxoffice (@TradeBOC) July 23, 2016
+          </p>
+
+         <a href="#" class="list-group-item">
+           <h4 class="list-group-item-heading">Sreedhar Pillai</h4>
+           <p>
+              “ #Kabali -July 22 – Tamil Nadu Net -Rs 21.5 Cr (approx). Highest Day 1,
+              in TN B-O history.Congrats @superstarrajini@theVcreations &mp; @beemji, ”
+                 — film writer and anchor Sreedhar Pillai.
+           </p>
+         </a>
+       </div><!-- list-group -->
+
+       <h5>Kabali Running towards 400cr Club</h5>
+       <p>
+       Kabali hit the screens on July 22 and is smashing box-office records with its collection.
+       At the success meet of Kabali, the makers have revealed that the film has grossed Rs 320 crore
+       worldwide in six days.Speaking about the film's success, producer Kalaipuli S Dhanu was quoted
+       by Sify saying, "After watching the film, Rajini sir told me that Kabali would be a crown to
+       V Creations. It has happened now and will speak more in the presence of Rajini sir."
+       </p>
+    </div><!-- end col-6-->
+</div><!--end row-->
+
+<nav aria-label="Page navigation">
+  <ul class="pagination pull-right">
+    <li class="disabled">
+      <a href="index.html" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="active"><a href="index.html">1</a></li>
+    <li><a href="pages/hollywood.html">2</a></li>
+    <li><a href="pages/bollywood.html">3</a></li>
+    <li><a href="pages/tollywood.html">4</a></li>
+    <li>
+      <a href="bollywood.html" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div><!--end main container-->
+
+</div><!--end of main container-->
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+        <h6>Copyright &copy; 2016 Celluloid</h6>
+        </div><!-- end col-sm-2 -->
+
+        <div class="col-sm-4">
+          <h6>About Us</h6>
+          <p>
+            Hub of an exhaustive collection of online library of movies and dvd's.
+          </p>
+        </div><!-- end col-sm-4 -->
+
+        <div class="col-sm-2">
+          <h6>Navigation</h6>
+          <ul class="unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!-- end col-sm-2 -->
+
+        <div class="col-sm-2">
+          <h6>Follow Us</h6>
+          <ul class="unstyled">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google Plus</a></li>
+          </ul>
+        </div><!-- end col-sm-2 -->
+
+        <div class="col-sm-2">
+          <h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Dp</h6>
+        </div><!-- end col-sm-2 -->
+      </div><!-- end row -->
+    </div><!-- end container -->
+  </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- If no online access, fallback to our hardcoded version of jQuery -->
+  	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="bootstrap/js/npm.js"></script> -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
