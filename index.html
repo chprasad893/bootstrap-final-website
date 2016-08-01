@@ -23,7 +23,7 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" >
             <!-- <span class="sr-only">Toggle navigation</span> -->
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -48,8 +48,8 @@
              </li>
            </ul>
 
-          <form class="navbar-form pull-left">
-            <input type="text" class="form-control" placeholder="Search this site..." id="searchInput">
+          <form class="navbar-form navbar-left">
+            <input type="text" class="form-control" placeholder="Search this site..." id="searchInput" />
             <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
           </form><!-- end navbar-form -->
 
@@ -216,7 +216,7 @@
         </div><!-end alert -->
 
         <!-- Visible only on small devices -->
-        <div class="well well-small visible-sm">
+        <div class="well well-small visible-sm visible-xs">
           <a href="" class="btn btn-large btn-block btn-default"><span class="glyphicon glyphicon-phone"></span> Give us a call!</a>
         </div><!-- end well-small -->
 
@@ -227,8 +227,8 @@
 
           <p class="lead"></p>
 
-          <a href="" class="btn btn-large btn-primary" id="alertMe">Watch latest movies</a>
-          <a href="" class="btn btn-large btn-link">or Buy DVD's</a>
+          <a href="" class="btn btn-large btn-primary pop" id="alertMe" data-toggle="popover" data-placement="top"  data-content="Please Login First">Watch latest movies</a>
+          <a href="" class="btn btn-large btn-link pop" data-toggle="popover" data-placement="top"  data-content="Please Login First">or Buy DVD's</a>
         </div><!-- end well -->
 
       </div><!-- end col-12 -->
@@ -295,6 +295,9 @@
 
     <!--Movie of the week-->
     <div class="row" id="weekMovie">
+      <div class="container">
+
+
       <div class="col-sm-6">
         <h3>Movie of the week</h3>
           <div class="tabbable">
@@ -306,12 +309,15 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tab3">
               <h4><span class="glyphicon glyphicon-facetime-video"></span> KABALI <small>rajini style</small></h4>
-              <a href="https://in.bookmyshow.com/buytickets/kabali-chennai/movie-chen-ET00039091-MT/20160725" target="_blank"><img src="images/week.jpg" alt="kabali poster" /></a>
+              <a href="https://in.bookmyshow.com/buytickets/kabali-chennai/movie-chen-ET00039091-MT/20160725" target="_blank">
+              <img src="images/week.jpg" alt="kabali poster" class="img-responsive" data-original-title="Click To Book Tickets" rel="book_tickets"  data-placement="right"/></a>
             </div><!--tab pan-1-->
 
-            <div class="tab-pane" id="tab4">
+            <div class="tab-pane " id="tab4">
               <h4>Kabali Trailor</h4>
-              <iframe width="520" height="480" src="https://www.youtube.com/embed/9mdJV5-eias" frameborder="0" allowfullscreen></iframe>
+              <div class="embed-responsive embed-responsive-4by3">
+              <iframe width="400" height="480" class="embed-responsive-item" src="https://www.youtube.com/embed/9mdJV5-eias" allowfullscreen></iframe>
+                </div>
               <!-- <img src="images/hero-sm-3" alt="" /> -->
             </div><!--tab pan-2-->
 
@@ -331,7 +337,7 @@
        <h4>Popular Tweets</h4>
 
        <div class="list-group">
-         <a href="#" class="list-group-item">
+         <a href="http://twitter.com" class="list-group-item" data-original-title="Click To Open in Twitter" data-placement="left" rel="tweets" target="_blank">
            <h4 class="list-group-item-heading">Taran Adarsh</h4>
            <p>
             “  #Kabali [Tamil+Telugu] opening in international markets:
@@ -341,7 +347,7 @@
                       — taran adarsh (@taran_adarsh) July 23, 2016
            </p>
          </a>
-         <a href="#" class="list-group-item">
+         <a href="http://twitter.com" class="list-group-item" data-original-title="Click To Open in Twitter" data-placement="left" rel="tweets" target="_blank">
            <h4 class="list-group-item-heading">Indian Boxoffice</h4>
            <p>
              “ #Kabali is now already becomes highest grossing tamil film in USA ever
@@ -349,7 +355,7 @@
                       — Indian Boxoffice (@TradeBOC) July 23, 2016
           </p>
 
-         <a href="#" class="list-group-item">
+         <a href="http://twitter.com" class="list-group-item" data-original-title="Click To Open in Twitter" data-placement="left" rel="tweets" target="_blank">
            <h4 class="list-group-item-heading">Sreedhar Pillai</h4>
            <p>
               “ #Kabali -July 22 – Tamil Nadu Net -Rs 21.5 Cr (approx). Highest Day 1,
@@ -368,6 +374,7 @@
        V Creations. It has happened now and will speak more in the presence of Rajini sir."
        </p>
     </div><!-- end col-6-->
+      </div>
 </div><!--end row-->
 
 <nav aria-label="Page navigation">
